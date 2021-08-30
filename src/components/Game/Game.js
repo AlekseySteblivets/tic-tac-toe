@@ -38,7 +38,7 @@ class Game extends Component {
         const history = this.state.history;
         console.log(history);
         const current = history[this.state.stepNumber]
-        console.log(current);
+        console.log(current.squares);
         const winner = calculateWinner(current.squares);
         console.log(winner);
 
