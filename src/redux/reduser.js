@@ -3,8 +3,9 @@ import * as actions from './actions';
 
 // console.log(actions);
 
+// let initialState = true;
 const modal = createReducer(true, {
-    [actions.toggleModal]: (_, { payload }) => payload,
+    [actions.toggleModal]: (_, { payload }) => !payload,
 });
 
 export default combineReducers(

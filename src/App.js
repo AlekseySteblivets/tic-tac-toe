@@ -1,13 +1,15 @@
 import Game from './components/Game/Game';
 import Modal from './components/Modal';
-import * as operations from './redux/operations';
+// import * as operations from './redux/operations';
 // import Board from './components/Board/Board';
 import './App.css';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import * as selector from './redux/selector';
 
+
 class App extends Component {
+
 
   render() {
     return (
@@ -16,7 +18,7 @@ class App extends Component {
           <Game />
         </div>
         {/* <Modal toggleModal={this.props.toggleModal} /> */}
-        {this.props.modal && (<Modal toggleModal={this.props.toggleModal} />)}
+        {this.props.modal && (<Modal />)}
       </>
     );
   }
@@ -26,9 +28,9 @@ const mapStateToProps = (state) => ({
   modal: selector.isModalOpen(state),
 })
 
-const mapDispatchToProps = {
-  toggleModal: operations.toggleModal,
-};
+// const mapDispatchToProps = {
+//   toggleModal: operations.toggleModal,
+// };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
