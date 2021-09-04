@@ -7,12 +7,12 @@ class Modal extends Component {
 
     onEscClick(evt) {
         if (evt.code === "Escape") {
-            this.props.toggleModal()
+            this.props.toggleModal(false)
         };
     }
 
     componentDidMount() {
-        window.addEventListener('keydown', this.onEscClick)
+        window.addEventListener('keydown', this.onEscClick.bind(this))
     }
 
     componentWillUnmount() {

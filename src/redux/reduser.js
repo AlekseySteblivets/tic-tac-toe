@@ -3,7 +3,7 @@ import * as actions from './actions';
 
 // console.log(actions);
 
-const modal = createReducer(null, {
+const modal = createReducer(true, {
     [actions.toggleModal]: (_, { payload }) => payload,
 });
 

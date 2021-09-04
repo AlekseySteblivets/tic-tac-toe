@@ -15,8 +15,8 @@ class App extends Component {
         <div className="App">
           <Game />
         </div>
-        <Modal toggleModal={this.props.toggleModal} />
-        {/* {this.props.modal && (<Modal toggleModal={this.props.toggleModal} />)} */}
+        {/* <Modal toggleModal={this.props.toggleModal} /> */}
+        {this.props.modal && (<Modal toggleModal={this.props.toggleModal} />)}
       </>
     );
   }
